@@ -5,6 +5,12 @@ terraform {
       version = "~> 4.16"
     }
   }
+   cloud {
+    organization = "kojimenez"
+    workspaces {
+      name = "learn-tfc-aws"
+    }
+  }
 
   required_version = ">= 1.2.0"
 }
