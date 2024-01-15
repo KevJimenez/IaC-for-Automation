@@ -4,6 +4,9 @@ terraform {
       source  = "hashicorp/aws"
       version = "~> 4.16"
     }
+    cloudflare = {
+      source = "hashicorp/cloudflare"
+    }
   }
    cloud {
     organization = "kojimenez"

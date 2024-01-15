@@ -4,8 +4,8 @@ provider "cloudflare" {
 }
 
 resource "cloudflare_record" "test" {
-  zone_id = "your-cloudflare-zone-id"
-  name    = "example.com"
+  zone_id = var.zonecf_id
+  name    = "17110711.xyz"
   value   = var.ec2_ip
   type    = "A"
   ttl     = 1
