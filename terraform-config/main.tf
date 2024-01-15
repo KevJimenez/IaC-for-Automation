@@ -5,7 +5,7 @@ terraform {
       version = "~> 4.16"
     }
     cloudflare = {
-      source = "hashicorp/cloudflare"
+      source = "cloudflare/cloudflare"
     }
   }
    cloud {
