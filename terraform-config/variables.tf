@@ -23,3 +23,8 @@ variable "zonecf_id" {
   description = "cf zone id"
   type = string
 }
+
+variable "pub_key" {
+  description = "pub key for ssh key"
+  type = string
+}
