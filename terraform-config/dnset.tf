@@ -7,7 +7,7 @@ provider "cloudflare" {
 resource "cloudflare_record" "test" {
   zone_id = var.zonecf_id
   name    = "17110711.xyz"
-  value   = var.ec2_ip
+  value   = aws_instance.app_server.public_ip
   type    = "A"
   ttl     = 1
 }
