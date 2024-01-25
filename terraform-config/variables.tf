@@ -14,11 +14,6 @@ variable "cf_api" {
   type = string
 }
 
-variable "ec2_ip" {
-  description = "ec2 instance ip"
-  type = string
-}
-
 variable "zonecf_id" {
   description = "cf zone id"
   type = string
