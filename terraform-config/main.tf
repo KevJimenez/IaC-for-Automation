@@ -11,7 +11,7 @@ terraform {
    cloud {
     organization = "kojimenez"
     workspaces {
-      name = "learn-tfc-aws"
+      name = "tfc-aws-portfolio"
     }
   }
 
