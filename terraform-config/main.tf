@@ -30,7 +30,8 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.ssh_access.id]
 
   tags = {
-    Name = "Static Web provisioned with Terraform and conf using Ansible"
+    Name = "cicd"
+    Value = "sys1"
   }
 }
 
