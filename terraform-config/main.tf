@@ -30,8 +30,7 @@ resource "aws_instance" "app_server" {
   vpc_security_group_ids = [aws_security_group.ssh_access.id]
 
   tags = {
-    Name = "cicd"
-    Value = "sys1"
+    cicd = "sys1"
   }
 }
 
