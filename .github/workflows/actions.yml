@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+      - name: Change directory
+        uses: cd /terraform-config
+
       - name: Checkout code
         uses: actions/checkout@v2
 
