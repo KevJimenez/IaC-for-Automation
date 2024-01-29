@@ -19,7 +19,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
-          cli_config_credentials_token: exvaBGxwi9bDbA.atlasv1.XzoJ9ZbtHunD4xFBh8VO0EnwKL9etOUcCLX0nEY33qUugWTxMEK2z0X6Svoz4LNJToU
+          cli_config_credentials_token: uxYpYiBod1OOEw.atlasv1.xGwN3he3bu5GcPC9gDLBhryWRukcgum2XjrPULvxhlRpxzpyQ3v6wpe8rxrmy6GIQaw
 
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
