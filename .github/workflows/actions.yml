@@ -42,4 +42,4 @@ jobs:
         run: pip install boto3
 
       - name: Run Ansible Playbook
-        run: ansible-playbook -i aws_ec2.yml playbook.yml -auto-approve -input=false
+        run: ansible-playbook -i aws_ec2.yml playbook.yml
