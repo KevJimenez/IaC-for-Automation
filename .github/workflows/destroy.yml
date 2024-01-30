@@ -12,8 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3 
 
-      - name: Terraform Init
-        run: terraform init
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve -input=false
 
       - name: Create a tfvars file
         run: |
