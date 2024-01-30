@@ -22,7 +22,7 @@ jobs:
         run: |
           echo "cf_email=${{ secrets.CF_EMAIL }}" > my_variables.tfvars
           echo "cf_api=${{ secrets.CF_API }}" >> my_variables.tfvars
-          echo "zonecf_id=${{ secrets.ZONECF_ID }}" > my_variables.tfvars
+          echo "zonecf_id=${{ secrets.ZONECF_ID }}" >> my_variables.tfvars
           echo "pub_key=${{ secrets.PUB_KEY }}" >> my_variables.tfvars
 
         # On push to "main", build or change infrastructure according to Terraform configuration files
