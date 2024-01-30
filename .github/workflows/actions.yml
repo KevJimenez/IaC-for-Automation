@@ -15,13 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3 
 
-       # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          cli_config_credentials_token: uxYpYiBod1OOEw.atlasv1.xGwN3he3bu5GcPC9gDLBhryWRukcgum2XjrPULvxhlRpxzpyQ3v6wpe8rxrmy6GIQaw
-
-      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init
         run: terraform init
 
@@ -29,17 +22,6 @@ jobs:
         # Note: It is recommended to set up a required "strict" status check in your repository for "Terraform Cloud". See the documentation on "strict" required status checks for more information: https://help.github.com/en/github/administering-a-repository/types-of-required-status-checks
       - name: Terraform Apply
         run: terraform apply -auto-approve -input=false
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install Ansible
-        run: python3 -m pip install --user ansible
-
-      - name: Install boto3
-        run: pip install boto3
 
       - name: Run Ansible Playbook
         run: ansible-playbook -i aws_ec2.yml playbook.yml
