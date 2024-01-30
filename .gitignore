@@ -3,3 +3,6 @@ terraform.tfvars
 .terraform.lock.hcl
 .terraform/
 .vscode/settings.json
+inventory.yml
+outputs.tf
+variables.yml
