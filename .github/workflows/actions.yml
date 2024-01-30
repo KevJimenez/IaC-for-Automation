@@ -18,7 +18,7 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
-      - name: Create .tfvars file
+      - name: Create a tfvars file
         run: |
           echo "cf_email=${{ secrets.CF_EMAIL }}" > my_variables.tfvars
           echo "cf_api=${{ secrets.CF_API }}" >> my_variables.tfvars
