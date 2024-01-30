@@ -1,4 +1,4 @@
-name: terraform and ansible automation
+name: Destroy infrastracture
 
 on: workflow_dispatch
 
