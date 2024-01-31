@@ -4,7 +4,7 @@
   become: true
  
 
-  pre-tasks:
+  pre_tasks:
 
   - name: Update
     apt:
