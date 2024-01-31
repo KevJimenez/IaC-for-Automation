@@ -1,0 +1,25 @@
+---
+- name: My first play
+  hosts: all
+  become: true
+ 
+  pre_tasks:
+
+  - name: Clean and Remove
+    apt:
+      uautoclean: true
+      autoremove: true
+
+  tasks:
+
+  - name: Install Apache
+    apt:
+      name: apache2
+      state: absent
+    
+  
+
+    
+
+     
+      
