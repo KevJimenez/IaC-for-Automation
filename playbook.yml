@@ -1,6 +1,6 @@
 ---
 - name: My first play
-  hosts: local
+  hosts: all
   become: true
  
   tasks:
