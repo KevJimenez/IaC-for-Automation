@@ -3,6 +3,18 @@
   hosts: all
   become: true
  
+
+  pre-tasks:
+  
+  - name: Update
+    apt:
+      update_cache: true
+
+  - name: Upgrade
+    apt:
+      upgrade: true
+
+
   tasks:
 
   - name: Update and Upgrade
