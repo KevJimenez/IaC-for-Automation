@@ -5,14 +5,14 @@
  
   pre_tasks:
 
-  - name: Clean files
-    apt:
-      autoclean: true
-
   - name: Update and Upgrade
     apt:
       update_cache: true
       upgrade: dist
+
+  - name: Clean files
+    apt:
+      autoclean: true
 
   tasks:
   - name: Pause for 5s
