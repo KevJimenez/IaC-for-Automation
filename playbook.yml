@@ -2,19 +2,18 @@
 - name: My first play
   hosts: all
   become: true
-
-  pre_tasks:
+ 
+  tasks:
+  
   - name: Update and Upgrade
     apt:
-      clean: true
       update_cache: true
       upgrade: dist
-      
-  tasks:
+
   - name: Install Apache
     apt:
       name: apache2
-      state: present
+      state: latest
     
   - name: Ensure apache is running
     service:
