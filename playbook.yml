@@ -13,7 +13,7 @@
   - name: Install Apache
     apt:
       name: apache2
-      state: latest
+      state: present
     
   - name: Ensure apache is running
     service:
