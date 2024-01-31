@@ -10,14 +10,7 @@
       update_cache: true
       upgrade: dist
 
-  - name: Clean files
-    apt:
-      autoclean: true
-
   tasks:
-  - name: Pause for 5s
-    pause:
-      seconds: 5
 
   - name: Install Apache
     apt:

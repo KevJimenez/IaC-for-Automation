@@ -7,7 +7,7 @@
 
   - name: Clean and Remove
     apt:
-      uautoclean: true
+      autoclean: true
       autoremove: true
 
   tasks:
