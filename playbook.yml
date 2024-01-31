@@ -15,6 +15,9 @@
       upgrade: dist
 
   tasks:
+  - name: Pause for 10s
+    pause:
+      seconds: 5
 
   - name: Install Apache
     apt:
