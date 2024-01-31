@@ -15,7 +15,7 @@
       upgrade: dist
 
   tasks:
-  - name: Pause for 10s
+  - name: Pause for 5s
     pause:
       seconds: 5
 
