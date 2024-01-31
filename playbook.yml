@@ -6,6 +6,7 @@
   pre_tasks:
   - name: Update and Upgrade
     apt:
+      clean: true
       update_cache: true
       upgrade: dist
       
