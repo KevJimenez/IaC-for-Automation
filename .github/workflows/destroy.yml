@@ -12,9 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3 
 
-      - name: Remove Apache
-        run: ansible -i aws_ec2.yml -all -m apt -a "name=apache2 status=absent"
-
       - name: Terraform init
         run: terraform init
 
