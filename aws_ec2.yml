@@ -3,4 +3,4 @@ regions:
   - ap-southeast-1
 
 filter:
- tag:cicd: sys1
+  tag:cicd: sys1

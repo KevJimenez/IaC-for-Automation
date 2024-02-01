@@ -6,7 +6,6 @@ jobs:
   deploy:
     runs-on: cicd1
   
-
     steps:
 
       - name: Checkout code
