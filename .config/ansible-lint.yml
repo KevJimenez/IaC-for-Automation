@@ -1,3 +1,5 @@
+---
 exclude_paths:
   - .github/ # implicit unless exclude_paths is defined in config
   - .config/
+...

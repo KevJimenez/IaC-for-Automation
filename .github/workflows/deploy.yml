@@ -1,3 +1,4 @@
+---
 name: Deploy infrastracture
 
 on: workflow_dispatch
@@ -31,3 +32,4 @@ jobs:
 
       - name: Run Ansible Playbook
         run: ansible-playbook -i aws_ec2.yml playbook.yml
+...
