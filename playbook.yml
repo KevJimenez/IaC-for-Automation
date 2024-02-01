@@ -5,43 +5,43 @@
  
   pre_tasks:
 
-  - name: Update and Upgrade
-    apt:
-      update_cache: true
-      upgrade: dist
+    - name: Update and Upgrade
+      apt:
+        update_cache: true
+        upgrade: dist
 
   tasks:
 
-  - name: Install Apache
-    apt:
-      name: apache2
-      state: present
-    
-  - name: Ensure apache is running
-    service:
-      name: apache2
-      state: started
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: present
+      
+    - name: Ensure apache is running
+      service:
+        name: apache2
+        state: started
 
-  - name: Install Docker Prerequisites
-    shell: |
-          set -o pipefail
-          sudo apt-get install ca-certificates curl
-          sudo install -m 0755 -d /etc/apt/keyrings
-          sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-          sudo chmod a+r /etc/apt/keyrings/docker.asc
-          echo \
-            "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-            $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-            sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-          sudo apt-get update
-    changed_when: false
-  
-  - name: Install Docker Packages
-    apt:
-      name: 
-      - docker-ce
-      - docker-ce-cli
-      - containerd.io
-      - docker-buildx-plugin
-      - docker-compose-plugin
+    - name: Install Docker Prerequisites
+      shell: |
+            set -o pipefail
+            sudo apt-get install ca-certificates curl
+            sudo install -m 0755 -d /etc/apt/keyrings
+            sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+            sudo chmod a+r /etc/apt/keyrings/docker.asc
+            echo \
+              "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+              $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+              sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+            sudo apt-get update
+      changed_when: false
+    
+    - name: Install Docker Packages
+      apt:
+        name: 
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-buildx-plugin
+        - docker-compose-plugin
 ...
