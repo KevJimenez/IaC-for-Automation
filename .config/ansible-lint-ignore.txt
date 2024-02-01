@@ -1,7 +1,6 @@
 playbook.yml yaml[trailing-spaces]
 playbook.yml fqcn[action-core]
 playbook.yml yaml[indentation] 
-playbook.yml yaml[new-line-at-end-of-file]
 playbook.yml yaml[line-length] 
 playbook.yml package-latest
 destroyinf.yml fqcn[action-core]

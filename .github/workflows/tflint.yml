@@ -1,4 +1,5 @@
-name: Lint
+---
+name: Tflint
 on:
   push:
     branches: main 
@@ -38,3 +39,4 @@ jobs:
 
     - name: Run TFLint
       run: tflint -f compact
+...
