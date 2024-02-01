@@ -1,4 +1,5 @@
 playbook.yml yaml[trailing-spaces]
 playbook.yml fqcn[action-core]
+playbook.yml risky-shell-pipe
 destroyinf.yml fqcn[action-core]
 destroyinf.yml yaml[trailing-spaces]
