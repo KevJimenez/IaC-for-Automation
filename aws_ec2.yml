@@ -2,6 +2,5 @@ plugin: amazon.aws.aws_ec2
 regions:
   - ap-southeast-1
 
-
 filter:
  tag:cicd: sys1
