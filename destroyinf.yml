@@ -5,15 +5,15 @@
 
   pre_tasks:
 
-  - name: Clean and Remove
-    apt:
-      autoclean: true
-      autoremove: true
+    - name: Clean and Remove
+      apt:
+        autoclean: true
+        autoremove: true
 
   tasks:
 
-  - name: Install Apache
-    apt:
-      name: apache2
-      state: absent
+    - name: Install Apache
+      apt:
+        name: apache2
+        state: absent
 ...
