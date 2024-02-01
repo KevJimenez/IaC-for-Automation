@@ -12,6 +12,9 @@
 
   tasks:
 
+    - name: Uninstall Docker Prerequisites
+      shell: for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+
     - name: Install Apache
       apt:
         name: apache2
