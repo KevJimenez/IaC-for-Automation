@@ -2,7 +2,7 @@
 - name: My first play
   hosts: all
   become: true
- 
+
   pre_tasks:
 
   - name: Clean and Remove
@@ -16,3 +16,4 @@
     apt:
       name: apache2
       state: absent
+      
