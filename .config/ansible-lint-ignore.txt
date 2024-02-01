@@ -1,5 +1,4 @@
 playbook.yml yaml[trailing-spaces]
 playbook.yml fqcn[action-core]
-playbook.yml yaml[line-length] 
 destroyinf.yml fqcn[action-core]
 destroyinf.yml yaml[trailing-spaces]
