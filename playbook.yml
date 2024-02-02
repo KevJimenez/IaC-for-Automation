@@ -34,12 +34,12 @@
           - docker-buildx-plugin
           - docker-compose-plugin
     
-    -name: Add ubuntu user to docker group
+    - name: Add ubuntu user to docker group
       user:
         name: ubuntu
         group: docker
         append: true
-         
+
     - name: Log in to DockerHub
       become_user: ubuntu
       community.docker.docker_login:
