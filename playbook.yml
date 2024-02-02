@@ -44,7 +44,7 @@
       become_user: ubuntu
       community.docker.docker_login:
         username: kevjimenez
-        password: {{ docker_key }}
+        password: "{{ docker_key }}"
     
     - name: Install Docker Watchtower
       community.docker.docker_container:
