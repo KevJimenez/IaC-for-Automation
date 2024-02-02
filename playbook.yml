@@ -44,7 +44,7 @@
       become_user: ubuntu
       docker_login:
         username: kevjimenez
-        password: dckr_pat_sXa-H6Mq0hR0V_VmnOgf52AeSSY
+        password: "{{ docker_key }}"
     
     - name: Install Docker Watchtower
       docker_container:
@@ -56,6 +56,7 @@
         command: -i 15 --cleanup=true
   
     - name: Install Docker Static Web Portfolio
+      become_user: ubuntu
       docker_container:
         name: kjstatic
         image: kevjimenez/kjstatic
