@@ -24,9 +24,5 @@ jobs:
         run: sleep 7s
 
       - name: Run Ansible Playbook
-        run: ansible-playbook -i aws_ec2.yml playbook.yml
-        env:
-          DOCKER_USER: ${{ secrets.DOCKER_USER }}
-          DOCKER_KEY: ${{ secrets.DOCKER_KEY }}
-         
+        run: ansible-playbook -i aws_ec2.yml -e "docker_key=${{ secrets.DOCKER_KEY }}" playbook.yml        
 ...
