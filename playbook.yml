@@ -42,12 +42,12 @@
 
     - name: Log in to DockerHub
       become_user: ubuntu
-      community.docker.docker_login:
+      docker_login:
         username: kevjimenez
         password: dckr_pat_sXa-H6Mq0hR0V_VmnOgf52AeSSY
     
     - name: Install Docker Watchtower
-      community.docker.docker_container:
+      docker_container:
         name: watchtower
         image: containrrr/watchtower
         volumes:
@@ -56,7 +56,7 @@
         command: -i 15 --cleanup=true
   
     - name: Install Docker Static Web Portfolio
-      community.docker.docker_container:
+      docker_container:
         name: kjstatic
         image: kevjimenez/kjstatic
         ports:
