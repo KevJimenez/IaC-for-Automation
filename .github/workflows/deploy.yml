@@ -32,4 +32,12 @@ jobs:
 
       - name: Run Ansible Playbook
         run: ansible-playbook -i aws_ec2.yml playbook.yml
+
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_KEY: ${{ secrets.DOCKER_KEY }}
+          CF_EMAIL: ${{ secrets.CF_EMAIL }}
+          CF_API: ${{ secrets.CF_API }}
+          ZONECF_ID: ${{ secrets.ZONECF_ID }}
+          PUB_KEY: ${{ secrets.PUB_KEY }}
 ...

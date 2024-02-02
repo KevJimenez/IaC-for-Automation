@@ -12,16 +12,6 @@
 
   tasks:
 
-    - name: Install Apache
-      apt:
-        name: apache2
-        state: present
-      
-    - name: Ensure apache is running
-      service:
-        name: apache2
-        state: started
-
     - name: Install Docker Prerequisites
       shell: |
             sudo apt-get install ca-certificates curl
@@ -43,4 +33,26 @@
           - containerd.io
           - docker-buildx-plugin
           - docker-compose-plugin
+    
+    - name: Log in to DockerHub
+      become_user: ubuntu
+      community.docker.docker_login:
+        username: {{ lookup('env', 'DOCKER_USER') }}
+        password: {{ lookup('env', 'DOCKER_KEY') }}
+    
+    - name: Install Docker Watchtower
+      community.docker.docker_container:
+        name: watchtower
+        image: containrrr/watchtower
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+          - /home/ubuntu/.docker/config.json:/config.json
+        command: -i 15 --cleanup=true
+  
+    - name: Install Docker Static Web Portfolio
+      community.docker.docker_container:
+        name: kjstatic
+        image: kevjimenez/kjstatic
+        ports:
+          - 80:80
 ...
