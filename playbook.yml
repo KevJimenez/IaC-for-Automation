@@ -37,8 +37,8 @@
     - name: Log in to DockerHub
       become_user: ubuntu
       community.docker.docker_login:
-        username: {{ lookup('env', 'DOCKER_USER') }}
-        password: {{ lookup('env', 'DOCKER_KEY') }}
+        username: "{{ lookup('env', 'DOCKER_USER') }}"
+        password: "{{ lookup('env', 'DOCKER_KEY') }}"
     
     - name: Install Docker Watchtower
       community.docker.docker_container:

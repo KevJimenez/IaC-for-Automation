@@ -5,3 +5,4 @@ terraform.tfstate.backup
 inventory.yml
 outputs.tf
 variables.yml
+terraform.tfvars
