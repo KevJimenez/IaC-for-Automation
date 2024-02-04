@@ -1,4 +1,5 @@
-name: TFLint
+---
+name: Terraform Linter
 on:
   push:
     branches: [ main ]
@@ -38,3 +39,4 @@ jobs:
 
     - name: Run TFLint
       run: tflint -f compact
+...

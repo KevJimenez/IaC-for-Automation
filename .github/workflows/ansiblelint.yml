@@ -1,6 +1,6 @@
 ---
 # .github/workflows/ansible-lint.yml
-name: ansible-lint
+name: Ansible Linter
 on:
   push:
     branches: main
