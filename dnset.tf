@@ -1,4 +1,3 @@
-
 provider "cloudflare" {
   email = var.cf_email
   api_key = var.cf_api
@@ -6,7 +5,7 @@ provider "cloudflare" {
 
 resource "cloudflare_record" "a_record_cf" {
   zone_id = var.zonecf_id
-  name    = "17110711.xyz"
+  name    = "kojimenez.site"
   value   = aws_instance.app_server.public_ip
   type    = "A"
   ttl     = 1
