@@ -39,11 +39,9 @@
         name: ubuntu
         groups: docker
         append: true
-      register: add_docker
     
     - name: Reset SSH for docker group to be used
       meta: reset_connection
-      when: add_docker == true
 
     - name: Log in to DockerHub
       become_user: ubuntu
