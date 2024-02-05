@@ -59,7 +59,7 @@ An automated setup of infrastracture with configuration for a web server (uses A
       ansible-playbook -i aws_ec2.yml playbook.yml -e "docker_key=${{ secrets.DOCKER_KEY }}"
       ```
 *Output:*
-- AWS Instance running docker with [Watchtower](https://github.com/containrrr/watchtower) and Containerized [Personal-Portfolio](https://github.com/KevJimenez/Personal-Portfolio).
+- AWS EC2 Instance running docker with [Watchtower](https://github.com/containrrr/watchtower) and Containerized [Personal-Portfolio](https://github.com/KevJimenez/Personal-Portfolio).
 - Personal portfolio website that can be accessed from https://kojimenez.site
 
 **Destroy Infrastructure** (destroy.yml)
