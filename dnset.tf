@@ -8,5 +8,4 @@ resource "cloudflare_record" "a_record_cf" {
   name    = "kojimenez.site"
   value   = aws_instance.app_server.public_ip
   type    = "A"
-  proxiable = true
 }
